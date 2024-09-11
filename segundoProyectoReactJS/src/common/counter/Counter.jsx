@@ -1,18 +1,4 @@
-import { useState } from "react";
-
-export const Counter = () => {
-  const [contador, setContador] = useState(0);
-  //[variable, función para modificar el valor de la variable] = useState(0)
-  //el valor entre paréntesis en el useState es el valor inicial de la variable
-
-  const sumar = () => {
-    setContador(contador + 1);
-  };
-
-  const restar = () => {
-    setContador(contador - 1);
-  };
-
+const Counter = ({ contador, sumar, restar }) => {
   return (
     <div>
       <h1>{contador}</h1>
@@ -21,3 +7,5 @@ export const Counter = () => {
     </div>
   );
 };
+
+export default Counter;
